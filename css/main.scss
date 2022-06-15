@@ -5,4 +5,67 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    padding: 50px 0;
+    background: url('../img/bg.jpg') center / cover no-repeat;
+    .boards {
+        display: flex;
+        width: 100%;
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-self: baseline;
+            max-width: 250px;
+            width: 100%;
+            background-color: rgba(0,0,0,.5);
+            margin: 0 15px;
+            padding: 10px;
+            transition: .3s all ease;
+            border-radius: 3px;
+            .title {
+                padding: 5px;
+                &:focus {
+                    outline: 1px solid rgba(168, 168, 168, .45);
+                }
+            }
+            .list {
+                min-height: 40px;
+                &__item {
+                    background-color: #fefefe;
+                    border-radius: 3px;
+                    padding: 10px;
+                    text-align: center;
+                    margin: 4px 0;
+                    font-weight: 400;
+                    font-size: 14px;
+                    cursor: pointer;
+                    outline: none;
+                    border: none;
+                }
+            }
+            .form {
+                border-radius: 3px;
+                margin-top: auto;
+                .textarea {
+                    resize: none;
+                    height: 60px;
+                    border-radius: 3px;
+                    border: none;
+                    background: #fff;
+                    padding: 10px;
+                    width: 100%;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
 }
