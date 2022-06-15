@@ -31,6 +31,7 @@
             border-radius: 3px;
             .title {
                 padding: 5px;
+                color: #fff;
                 &:focus {
                     outline: 1px solid rgba(168, 168, 168, .45);
                 }
@@ -53,6 +54,7 @@
             .form {
                 border-radius: 3px;
                 margin-top: auto;
+                display: none;
                 .textarea {
                     resize: none;
                     height: 60px;
@@ -65,7 +67,73 @@
                         outline: none;
                     }
                 }
+                .buttons {
+                    display: flex;
+                    .add__item-btn {
+                        background: rgb(13, 136, 218);
+                        border: none;
+                        height: 35px;
+                        cursor: pointer;
+                        color: #fff;
+                        border-radius: 3px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 10px;
+                        width: 100%;
+                    }
+                    .cancel__item-btn {
+                        padding: 0 10px;
+                        background: rgb(160, 17, 12);
+                        border: none;
+                        height: 35px;
+                        cursor: pointer;
+                        color: #fff;
+                        border-radius: 3px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 75px;
+                        margin-left: auto;
+                        flex-shrink: 0;
+                    }
+                }
+            }
+
+            .add__btn {
+                height: 30px;
+                background: rgba(155,155,155,.3);
+                border-radius: 3px;
+                margin-top: 5px;
+                display: flex;
+                align-items: center;
+                font-size: 12px;
+                padding-left: 10px;
+                color: #fff;
+                span {
+                    font-size: 20px;
+                    margin-right: 10px;
+                    color: #fff;
+                }
             }
         }
+    }
+
+    .button {
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(19,130,204, .62);
+        border: none;
+        width: 150px;
+        cursor: pointer;
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translate(-50%);
+        color: #fff;
+        border-radius: 3px;
+        font-size: 14px;
     }
 }
