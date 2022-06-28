@@ -7,21 +7,29 @@ function addTask() {
         textarea = document.querySelector('.textarea'),
         form = document.querySelector('.form');
 
-        let value;
+    let value;
 
-        btn.addEventListener('click', () => {
-            form.style.display = 'block';
-            addBtn.style.display = 'none';
-            btn.style.display = 'none';
+    btn.addEventListener('click', () => {
+        form.style.display = 'block';
+        addBtn.style.display = 'none';
+        btn.style.display = 'none';
 
-            textarea.addEventListener('input', e => {
-                value = e.target.value;
-                if(value) {
-                    addBtn.style.display = 'block';
-                } else {
-                    addBtn.style.display = 'none';
-                }
-            });
+        textarea.addEventListener('input', e => {
+            value = e.target.value;
+            if(value) {
+                addBtn.style.display = 'block';
+            } else {
+                addBtn.style.display = 'none';
+            }
         });
+    });
+
+    cancelBtn.addEventListener('click', () => {
+        textarea.value = '';
+        value = '';
+        form.style.display = '';
+        btn.style.display = 'block';
+
+    });
 }
 addTask();
