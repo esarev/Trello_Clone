@@ -25,11 +25,25 @@ function addTask() {
     });
 
     cancelBtn.addEventListener('click', () => {
+        clearForm();
+    });
+
+    addBtn.addEventListener('click', () => {
+        const newItem = document.createElement('div');
+        newItem.classList.add('list__item');
+        newItem.draggable = true;
+        newItem.textContent = value;
+        lists[0].append(newItem);
+
+        clearForm();
+    });
+    
+
+    function clearForm() {
         textarea.value = '';
         value = '';
-        form.style.display = '';
+        form.style.display = 'none';
         btn.style.display = 'block';
-
-    });
+    }
 }
 addTask();
