@@ -1,4 +1,5 @@
 const lists = document.querySelectorAll('.list');
+const button = document.querySelector('.button');
 
 function addTask() {
     const btn = document.querySelector('.add__btn'),
@@ -37,13 +38,25 @@ function addTask() {
 
         clearForm();
     });
-    
+
 
     function clearForm() {
         textarea.value = '';
         value = '';
         form.style.display = 'none';
-        btn.style.display = 'block';
+        btn.style.display = 'flex';
     }
 }
 addTask();
+
+function addBoard() {
+    const boards = document.querySelector('.boards');
+    const board = document.createElement('div');
+    board.classList.add('boards__item');
+    board.innerHTML = `
+        <span contenteditable="true" class="title">Введите название</span>
+        <div class="list"></div>
+    `
+    boards.append(board);
+}
+button.addEventListener('click', addBoard);
